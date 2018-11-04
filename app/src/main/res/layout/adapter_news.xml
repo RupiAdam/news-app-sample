@@ -47,19 +47,21 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:maxLines="2"
                 android:text="Long title goe here"
                 android:textColor="#434343"
-                android:textSize="16sp"
-                android:maxLines="2"
-                android:ellipsize="end"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="description"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
                 android:maxLines="3"
-                android:ellipsize="end"/>
+                android:text="description" />
 
         </LinearLayout>
 
