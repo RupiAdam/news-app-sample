@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.adapter_news.view.*
+import net.rupiadam.news.GlideApp
 import net.rupiadam.news.R
 import net.rupiadam.news.room.News
 import java.text.SimpleDateFormat
@@ -38,6 +39,9 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ViewHolder>(){
         holder.title.text = item.title
         holder.description.text = item.content
         holder.contributor.text = "${item.create_by}  •  ${dateFormat.format(item.create_date)}"
+
+        GlideApp.with(context).load(R.drawable.default_avatar).circleCrop().into(holder.avatar)
+        GlideApp.with(context).load(item.featured_image).into(holder.thumbnail)
 
     }
 

@@ -1,5 +1,6 @@
 package net.rupiadam.news.activity
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,9 @@ class NewsListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_news_list)
         setSupportActionBar(toolbar)
 
-
+        fab.setOnClickListener {
+            startActivity(Intent(this, CreateNewsActivity::class.java))
+        }
 
     }
 
