@@ -28,8 +28,7 @@ public class News {
     @ColumnInfo(name = "create_by")
     public String create_by;
 
-    public News(@NonNull int id, String featured_image, String title, String content, Long create_date, String create_by) {
-        this.id = id;
+    public News(String featured_image, String title, String content, Long create_date, String create_by) {
         this.featured_image = featured_image;
         this.title = title;
         this.content = content;
